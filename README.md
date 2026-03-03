@@ -1,49 +1,68 @@
-# Hey, I'm Ty 👋
+<div align="center">
 
-**AI Engineer & Co-Founder** building at the intersection of AI and finance.
+# Hey, I'm Ty üëã
 
-## 🚀 What I'm Building
+**Principal Frontend Engineer | AI-Native Product Builder**
 
-### [Strykr.ai](https://strykr.ai)
-AI-powered market intelligence platform serving **170K+ users**. Real-time signals, sentiment analysis, and predictive insights for traders.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/tyblackard)
+[![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://npmjs.com/~tytaninc7)
+[![Strykr](https://img.shields.io/badge/Strykr.ai-000?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggZD0iTTEyIDJMMiA3bDEwIDUgMTAtNS0xMC01eiIvPjxwYXRoIGQ9Ik0yIDE3bDEwIDUgMTAtNSIvPjxwYXRoIGQ9Ik0yIDEybDEwIDUgMTAtNSIvPjwvc3ZnPg==&logoColor=white)](https://strykr.ai)
 
-### PRISM API
-Canonical resolution layer for AI agents accessing fragmented financial data. **300+ endpoints** for stocks, crypto, forex, and derivatives.
-
-## 🛠️ Tech Stack
-
-```
-Languages:    Python · TypeScript · JavaScript · SQL
-Frontend:     React · Next.js · Tailwind CSS
-Backend:      FastAPI · Node.js · PostgreSQL · Supabase
-AI/LLMs:      Claude · GPT-4 · Gemini · OpenAI API · Anthropic API
-DevOps:       Vercel · GitHub Actions · Docker
-```
-
-## 📦 Open Source
-
-I build tools for AI-assisted development:
-
-| Package | Description |
-|---------|-------------|
-| [ai-pdf-builder](https://npmjs.com/package/ai-pdf-builder) | Generate PDFs with AI (SAFEs, pitch decks, reports) |
-| [web-qa-bot](https://npmjs.com/package/web-qa-bot) | Automated QA testing with AI |
-| [skill-scaffold](https://npmjs.com/package/skill-scaffold) | Scaffold AI agent skills instantly |
-
-**25K+ combined downloads** across npm packages and AI agent skills.
-
-## 🎯 What I Do
-
-- **Ship fast** using Claude, Cursor, and modern AI tooling
-- **Build APIs** that AI agents can actually use
-- **Create tools** that make developers more productive
-- **Vibe code** complex features in hours, not weeks
-
-## 📫 Connect
-
-[![X](https://img.shields.io/badge/@Tytaninc-000000?style=flat&logo=x&logoColor=white)](https://x.com/Tytaninc)
-[![LinkedIn](https://img.shields.io/badge/Ty_Blackard-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/tyblackard)
+</div>
 
 ---
 
-*Open to AI engineering roles and early-stage opportunities.*
+## üöÄ What I'm Building
+
+### [Strykr.ai](https://strykr.ai) ‚Äî AI Market Intelligence
+AI-powered trading platform serving **170,000+ users**. Real-time signals, sentiment analysis, and predictive insights.
+
+- Built entire frontend from scratch ‚Äî React, Next.js 14, TypeScript
+- Streaming AI responses with sub-second latency
+- Real-time WebSocket data feeds, candlestick charts, multi-asset screeners
+
+### PRISM API ‚Äî Canonical Financial Data
+Resolution layer for AI agents accessing fragmented financial data. **300+ endpoints** for stocks, crypto, forex.
+
+---
+
+## üõ†Ô∏è Stack
+
+```
+Frontend     React ¬∑ Next.js 14 ¬∑ TypeScript ¬∑ Tailwind ¬∑ Shadcn/Radix
+Backend      FastAPI ¬∑ Node.js ¬∑ PostgreSQL ¬∑ Supabase ¬∑ Neon
+AI/LLMs      Claude API ¬∑ OpenAI API ¬∑ OpenRouter ¬∑ Cursor ¬∑ MCPs
+DevOps       Vercel ¬∑ GitHub Actions ¬∑ Docker ¬∑ Base Chain
+```
+
+---
+
+## üì¶ Open Source ‚Äî 25K+ Downloads
+
+| Package | What it does |
+|---------|-------------|
+| [ai-pdf-builder](https://npmjs.com/package/ai-pdf-builder) | Generate PDFs with AI ‚Äî SAFEs, pitch decks, reports |
+| [elite-longterm-memory](https://npmjs.com/package/elite-longterm-memory) | Persistent memory for AI agents |
+| [skill-scaffold](https://npmjs.com/package/skill-scaffold) | Scaffold AI agent skills in seconds |
+| [web-qa-bot](https://npmjs.com/package/web-qa-bot) | Automated QA testing with AI |
+| [moltbot-best-practices](https://npmjs.com/package/moltbot-best-practices) | 15 rules to make AI agents behave |
+
+üëâ **More at** [github.com/NextFrontierBuilds](https://github.com/NextFrontierBuilds) and [clawdhub.com](https://clawdhub.com)
+
+---
+
+## üéØ What I Do
+
+- **Ship fast** ‚Äî Claude + Cursor + modern AI tooling
+- **Build for AI** ‚Äî APIs and tools AI agents can actually use
+- **Vibe code** ‚Äî Complex features in hours, not weeks
+
+---
+
+<div align="center">
+
+**Open to AI engineering roles and early-stage opportunities**
+
+üì´ [tybblackard@gmail.com](mailto:tybblackard@gmail.com)
+
+</div>
