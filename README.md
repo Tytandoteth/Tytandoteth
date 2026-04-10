@@ -55,3 +55,37 @@ Backend      FastAPI • Node.js • PostgreSQL • Supabase • Neon • Redis
 AI / LLMs    Claude API • OpenAI API • streaming SSE • prompt systems • MCPs
 Infra        Railway • Vercel • Docker • GitHub Actions
 Other        Clerk • Stripe • WebSockets • REST APIs
+
+## Open Source
+
+I build and publish tools focused on AI workflows, developer productivity, and agent infrastructure.
+
+- [ai-pdf-builder](https://npmjs.com/package/ai-pdf-builder) — AI-powered PDF generation
+- [elite-longterm-memory](https://npmjs.com/package/elite-longterm-memory) — persistent memory for AI agents
+- [skill-scaffold](https://npmjs.com/package/skill-scaffold) — scaffolding for AI agent skills
+- [web-qa-bot](https://npmjs.com/package/web-qa-bot) — automated QA workflows
+- [moltbot-best-practices](https://npmjs.com/package/moltbot-best-practices) — production guidelines for AI agents
+
+**More:**
+- [GitHub](https://github.com/NextFrontierBuilds)
+- [ClawHub](https://clawhub.ai/u/nextfrontierbuilds)
+
+---
+
+## What I Like Building
+
+- Full-stack products from idea to production
+- AI-powered user experiences
+- Developer tools and APIs
+- Real-time data products
+- Early-stage systems that need to move fast and scale cleanly
+
+---
+
+<div align="center">
+
+**Open to founding engineer and early-stage product engineering roles**
+
+📩 [tybblackard@gmail.com](mailto:tybblackard@gmail.com)
+
+</div>
