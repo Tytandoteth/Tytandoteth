@@ -2,7 +2,7 @@
 
 # Hey, I'm Ty Blackard
 
-**Principal Frontend Engineer | AI-Native Product Builder**
+**Founding Engineer | 0-to-1 Full-Stack Product Builder**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/tyblackard)
 [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://npmjs.com/~tytaninc7)
@@ -12,59 +12,46 @@
 
 ---
 
-## 🚀 What I'm Building
+## About Me
 
-### [Strykr.ai](https://strykr.ai) — AI Market Intelligence
-AI-powered trading platform serving **170,000+ users**. Real-time signals, sentiment analysis, and predictive insights.
+I’m a founding engineer focused on building full-stack products from zero to production.
 
-- Built entire frontend from scratch — React, Next.js 14, TypeScript
-- Streaming AI responses with sub-second latency
-- Real-time WebSocket data feeds, candlestick charts, multi-asset screeners
+My work spans frontend, backend, databases, auth, payments, real-time systems, and production AI integrations. I do my best work in early-stage environments where speed, ownership, and product judgment matter.
 
-### PRISM API — Canonical Financial Data
-Resolution layer for AI agents accessing fragmented financial data. **300+ endpoints** for stocks, crypto, and forex.
+Recently, I built the **PRISM API dashboard** end to end using **FastAPI, Next.js, React, Clerk, Postgres, and Railway**.
 
 ---
 
-## 🛠 Stack
+## What I’ve Worked On
 
-```
-Frontend     React • Next.js 14 • TypeScript • Tailwind • Shadcn/Radix
-Backend      FastAPI • Node.js • PostgreSQL • Supabase • Neon
-AI / LLMs    Claude API • OpenAI API • OpenRouter • Cursor • MCPs
-DevOps       Vercel • GitHub Actions • Docker • Base Chain
-```
+### [Strykr.ai](https://strykr.ai)
+AI-powered market intelligence platform focused on signals, market data, and user-facing AI workflows.
 
----
+- Built major frontend and product systems using **React, Next.js, and TypeScript**
+- Worked on streaming AI experiences, real-time market interfaces, and production UX
+- Contributed to fast-moving product development across the stack in a small engineering team
 
-## 📦 Open Source — 25K+ Downloads
+### [PRISM API](https://prismapi.ai)
+Canonical financial data platform for developers and AI agents.
 
-| Package | Description |
-|--------|-------------|
-| [ai-pdf-builder](https://npmjs.com/package/ai-pdf-builder) | Generate PDFs with AI — SAFEs, pitch decks, reports |
-| [elite-longterm-memory](https://npmjs.com/package/elite-longterm-memory) | Persistent memory layer for AI agents |
-| [skill-scaffold](https://npmjs.com/package/skill-scaffold) | Scaffold AI agent skills in seconds |
-| [web-qa-bot](https://npmjs.com/package/web-qa-bot) | Automated QA testing with AI |
-| [moltbot-best-practices](https://npmjs.com/package/moltbot-best-practices) | Rules for building reliable AI agents |
+- Built the API dashboard end to end on my own
+- Stack: **Python FastAPI, Next.js, React, Clerk, Postgres, Railway**
+- Focused on developer experience, dashboard UX, auth flows, backend architecture, and deployment
 
-📂 **More projects:**  
-https://github.com/NextFrontierBuilds  
-https://clawdhub.com
+### Magnify Labs
+Micro-lending infrastructure on Base Chain and World Chain.
+
+- Led DevOps, infrastructure, and product systems
+- Built CI/CD pipelines, backend workflows, and production database infrastructure
+- Supported a platform used by tens of thousands of users
 
 ---
 
-## ⚡ What I Do
+## Stack
 
-- **Ship fast** — Claude + Cursor + modern AI tooling
-- **Build for AI** — APIs and tools AI agents can actually use
-- **Vibe code** — complex features in hours, not weeks
-
----
-
-<div align="center">
-
-**Open to AI engineering roles and early-stage opportunities**
-
-📩 [tybblackard@gmail.com](mailto:tybblackard@gmail.com)
-
-</div>
+```txt
+Frontend     React • Next.js • TypeScript • Tailwind • Shadcn • Radix UI
+Backend      FastAPI • Node.js • PostgreSQL • Supabase • Neon • Redis
+AI / LLMs    Claude API • OpenAI API • streaming SSE • prompt systems • MCPs
+Infra        Railway • Vercel • Docker • GitHub Actions
+Other        Clerk • Stripe • WebSockets • REST APIs
