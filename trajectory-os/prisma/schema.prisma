@@ -1,0 +1,202 @@
+// Trajectory OS schema.
+// SQLite by default for zero-friction local dev.
+// For production, flip the provider to "postgresql" and point DATABASE_URL
+// at Supabase / Neon / Railway. No other code changes required.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Settings — kept on User for MVP; split into a Settings table if it grows.
+  monthlyBurnTarget Float  @default(8000)
+  savingsTarget     Float  @default(50000)
+  liquidCashStart   Float  @default(0) // opening balance, added to net flows
+  weightJobs        Int    @default(30)
+  weightFitness     Int    @default(25)
+  weightContent     Int    @default(20)
+  weightFinance     Int    @default(15)
+  weightVenture     Int    @default(10)
+  dashboardCards    String @default("[\"runway\",\"burn\",\"jobs_week\",\"workouts_week\",\"posts_week\",\"weekly_score\"]")
+
+  goals          Goal[]
+  commitments    WeeklyCommitment[]
+  jobLeads       JobLead[]
+  workouts       Workout[]
+  contentItems   ContentItem[]
+  finances       Finance[]
+  ventureUpdates VentureUpdate[]
+  dailyCheckins  DailyCheckin[]
+  weeklyReviews  WeeklyReview[]
+}
+
+model Goal {
+  id           String    @id @default(cuid())
+  userId       String
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title        String
+  description  String?
+  category     String // wealth | fitness | job | content | venture | other
+  timeframe    String // north_star | ninety_day | weekly
+  targetValue  Float?
+  currentValue Float?
+  unit         String?
+  dueDate      DateTime?
+  status       String    @default("active") // active | paused | done | dropped
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@index([userId, timeframe, status])
+}
+
+model WeeklyCommitment {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  weekStart DateTime
+  category  String // jobs | fitness | content | finance | venture
+  title     String
+  target    Int      @default(1)
+  completed Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@index([userId, weekStart])
+}
+
+model JobLead {
+  id                   String    @id @default(cuid())
+  userId               String
+  user                 User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  company              String
+  role                 String
+  source               String?
+  location             String?
+  compensationEstimate String?
+  stage                String    @default("lead") // lead | applied | recruiter_screen | technical | final_round | offer | rejected | archived
+  link                 String?
+  nextAction           String?
+  followUpDate         DateTime?
+  probability          Int? // 0-100
+  notes                String?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+
+  @@index([userId, stage])
+}
+
+model Workout {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date          DateTime
+  workoutType   String
+  durationMin   Int
+  completed     Boolean  @default(true)
+  bodyweight    Float?
+  proteinHit    Boolean  @default(false)
+  creatineTaken Boolean  @default(false)
+  notes         String?
+  createdAt     DateTime @default(now())
+
+  @@index([userId, date])
+}
+
+model ContentItem {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  platform    String // twitter | linkedin | youtube | blog | tiktok | newsletter
+  format      String // post | thread | video | article | short | newsletter
+  status      String    @default("idea") // idea | drafted | recorded | edited | posted | repurposed
+  hook        String?
+  cta         String?
+  publishDate DateTime?
+  notes       String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([userId, status])
+}
+
+model Finance {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date      DateTime
+  type      String // income | expense
+  category  String
+  amount    Float
+  notes     String?
+  createdAt DateTime @default(now())
+
+  @@index([userId, date])
+}
+
+model VentureUpdate {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date          DateTime
+  ventureName   String
+  metricName    String
+  metricValue   Float
+  priority      String?
+  blocker       String?
+  nextMilestone String?
+  notes         String?
+  createdAt     DateTime @default(now())
+
+  @@index([userId, date])
+}
+
+model DailyCheckin {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date           DateTime
+  topPriority1   String?
+  topPriority2   String?
+  topPriority3   String?
+  workoutPlanned Boolean  @default(false)
+  energyLevel    Int? // 1-5
+  stressLevel    Int? // 1-5
+  notes          String?
+  createdAt      DateTime @default(now())
+
+  @@unique([userId, date])
+  @@index([userId, date])
+}
+
+model WeeklyReview {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  weekStart     DateTime
+  wins          String?
+  losses        String?
+  lessons       String?
+  nextWeekFocus String?
+  scoreJobs     Int      @default(0)
+  scoreFitness  Int      @default(0)
+  scoreContent  Int      @default(0)
+  scoreFinance  Int      @default(0)
+  scoreVenture  Int      @default(0)
+  totalScore    Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([userId, weekStart])
+  @@index([userId, weekStart])
+}
